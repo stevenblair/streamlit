@@ -1,4 +1,4 @@
-module github.com/streamlit/streamlit/go-backend
+module github.com/stevenblair/streamlit/go-backend
 
 go 1.23
 

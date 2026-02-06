@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -759,7 +760,7 @@ const file_streamlit_proto_Common_proto_rawDesc = "" +
 	"\x0faudio_file_info\x18\x03 \x01(\v2\x11.UploadedFileInfoH\x02R\raudioFileInfo\x88\x01\x01B\a\n" +
 	"\x05_dataB\x16\n" +
 	"\x14_file_uploader_stateB\x12\n" +
-	"\x10_audio_file_infoB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x10_audio_file_infoB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Common_proto_rawDescOnce sync.Once

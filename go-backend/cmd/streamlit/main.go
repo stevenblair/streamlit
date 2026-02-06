@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/streamlit/streamlit/go-backend/internal/server"
+	"github.com/stevenblair/streamlit/go-backend/internal/server"
 )
 
 const (

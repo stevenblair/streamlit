@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/streamlit/streamlit/go-backend/internal/runtime"
+	"github.com/stevenblair/streamlit/go-backend/internal/runtime"
 )
 
 // Config holds the server configuration

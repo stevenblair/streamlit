@@ -33,7 +33,7 @@ echo Step 3: Generating Go code from temp proto files...
 cd "%TEMP_PROTO_DIR%"
 for %%f in (streamlit\proto\*.proto) do (
     echo Generating: %%~nxf
-    protoc --proto_path=. --go_out="%PROTO_OUT_DIR%" --go_opt=module=github.com/streamlit/streamlit/go-backend/proto "%%f"
+    protoc --proto_path=. --go_out="%PROTO_OUT_DIR%" --go_opt=module=github.com/stevenblair/streamlit/go-backend/proto "%%f"
 )
 cd "%SCRIPT_DIR%"
 

@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -328,7 +329,7 @@ const file_streamlit_proto_PageProfile_proto_rawDesc = "" +
 	"\aCommand\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x1d\n" +
 	"\x04args\x18\x02 \x03(\v2\t.ArgumentR\x04args\x12\x12\n" +
-	"\x04time\x18\x04 \x01(\x03R\x04timeB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x04time\x18\x04 \x01(\x03R\x04timeB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_PageProfile_proto_rawDescOnce sync.Once

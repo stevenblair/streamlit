@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -192,7 +193,7 @@ const file_streamlit_proto_Radio_proto_rawDesc = "" +
 	"\n" +
 	"\b_defaultB\f\n" +
 	"\n" +
-	"_raw_valueJ\x04\b\a\x10\bB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"_raw_valueJ\x04\b\a\x10\bB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Radio_proto_rawDescOnce sync.Once

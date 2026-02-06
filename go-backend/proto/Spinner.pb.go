@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -107,7 +108,7 @@ const file_streamlit_proto_Spinner_proto_rawDesc = "" +
 	"\aSpinner\x12\x12\n" +
 	"\x04text\x18\x01 \x01(\tR\x04text\x12\x14\n" +
 	"\x05cache\x18\x02 \x01(\bR\x05cache\x12\x1b\n" +
-	"\tshow_time\x18\x03 \x01(\bR\bshowTimeB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\tshow_time\x18\x03 \x01(\bR\bshowTimeB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Spinner_proto_rawDescOnce sync.Once

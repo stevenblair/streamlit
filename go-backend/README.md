@@ -24,7 +24,7 @@ go build -o waveform.exe .
 
 **Users can import the library:**
 ```bash
-go get github.com/streamlit/streamlit/go-backend
+go get github.com/stevenblair/streamlit/go-backend
 ```
 
 ## Prerequisites
@@ -86,7 +86,7 @@ go-backend/
 ```go
 package main
 
-import st "github.com/streamlit/streamlit/go-backend"
+import st "github.com/stevenblair/streamlit/go-backend"
 
 func main() {
     st.Run(func() {

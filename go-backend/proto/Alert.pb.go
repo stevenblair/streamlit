@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -186,7 +187,7 @@ const file_streamlit_proto_Alert_proto_rawDesc = "" +
 	"\x05ERROR\x10\x01\x12\v\n" +
 	"\aWARNING\x10\x02\x12\b\n" +
 	"\x04INFO\x10\x03\x12\v\n" +
-	"\aSUCCESS\x10\x04B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\aSUCCESS\x10\x04B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Alert_proto_rawDescOnce sync.Once

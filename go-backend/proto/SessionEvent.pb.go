@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -151,7 +152,7 @@ const file_streamlit_proto_SessionEvent_proto_rawDesc = "" +
 	"\x1bscript_was_manually_stopped\x18\x02 \x01(\bH\x00R\x18scriptWasManuallyStopped\x12N\n" +
 	"\x1cscript_compilation_exception\x18\x03 \x01(\v2\n" +
 	".ExceptionH\x00R\x1ascriptCompilationExceptionB\x06\n" +
-	"\x04typeB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x04typeB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_SessionEvent_proto_rawDescOnce sync.Once

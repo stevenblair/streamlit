@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -348,7 +349,7 @@ const file_streamlit_proto_ButtonGroup_proto_rawDesc = "" +
 	"\x11SEGMENTED_CONTROL\x10\x00\x12\t\n" +
 	"\x05PILLS\x10\x01B\a\n" +
 	"\x05_helpJ\x04\b\a\x10\bJ\x04\b\t\x10\n" +
-	"B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ButtonGroup_proto_rawDescOnce sync.Once

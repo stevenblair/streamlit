@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -332,7 +333,7 @@ const file_streamlit_proto_BidiComponent_proto_rawDesc = "" +
 	"\x0f_js_source_pathB\x0f\n" +
 	"\r_html_contentB\x0e\n" +
 	"\f_css_contentB\x12\n" +
-	"\x10_css_source_pathB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x10_css_source_pathB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_BidiComponent_proto_rawDescOnce sync.Once

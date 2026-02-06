@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -106,7 +107,7 @@ const file_streamlit_proto_SessionStatus_proto_rawDesc = "" +
 	"#streamlit/proto/SessionStatus.proto\"[\n" +
 	"\rSessionStatus\x12\x1e\n" +
 	"\vrun_on_save\x18\x01 \x01(\bR\trunOnSave\x12*\n" +
-	"\x11script_is_running\x18\x02 \x01(\bR\x0fscriptIsRunningB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x11script_is_running\x18\x02 \x01(\bR\x0fscriptIsRunningB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_SessionStatus_proto_rawDescOnce sync.Once

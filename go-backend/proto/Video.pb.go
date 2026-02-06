@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -286,7 +287,7 @@ const file_streamlit_proto_Video_proto_rawDesc = "" +
 	"\n" +
 	"\x06NATIVE\x10\x01\x12\x12\n" +
 	"\x0eYOUTUBE_IFRAME\x10\x02B\x0f\n" +
-	"\r_width_configJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03J\x04\b\x04\x10\x05B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\r_width_configJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03J\x04\b\x04\x10\x05B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Video_proto_rawDescOnce sync.Once

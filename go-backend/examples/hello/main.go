@@ -1,7 +1,7 @@
 package main
 
 import (
-	st "github.com/streamlit/streamlit/go-backend"
+	st "github.com/stevenblair/streamlit/go-backend"
 )
 
 func main() {

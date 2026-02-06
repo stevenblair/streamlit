@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -90,7 +91,7 @@ const file_streamlit_proto_ParentMessage_proto_rawDesc = "" +
 	"\n" +
 	"#streamlit/proto/ParentMessage.proto\")\n" +
 	"\rParentMessage\x12\x18\n" +
-	"\amessage\x18\x01 \x01(\tR\amessageB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\amessage\x18\x01 \x01(\tR\amessageB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ParentMessage_proto_rawDescOnce sync.Once

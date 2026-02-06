@@ -5,7 +5,7 @@ Complete API reference for writing Streamlit apps in Go.
 ## Import
 
 ```go
-import st "github.com/streamlit/streamlit/go-backend/pkg/streamlit"
+import st "github.com/stevenblair/streamlit/go-backend/pkg/streamlit"
 ```
 
 ## App Lifecycle
@@ -341,7 +341,7 @@ if st.Button("Let it snow") {
 ```go
 package main
 
-import st "github.com/streamlit/streamlit/go-backend/pkg/streamlit"
+import st "github.com/stevenblair/streamlit/go-backend/pkg/streamlit"
 
 func main() {
     st.Run(app)

@@ -64,7 +64,7 @@ Create a new .go file:
 ```go
 package main
 
-import st "github.com/streamlit/streamlit/go-backend/pkg/streamlit"
+import st "github.com/stevenblair/streamlit/go-backend/pkg/streamlit"
 
 func main() {
     st.Run(app)

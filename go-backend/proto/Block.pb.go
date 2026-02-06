@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -1407,7 +1408,7 @@ const file_streamlit_proto_Block_proto_rawDesc = "" +
 	"\x04typeB\x05\n" +
 	"\x03_idB\x10\n" +
 	"\x0e_height_configB\x0f\n" +
-	"\r_width_configB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\r_width_configB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Block_proto_rawDescOnce sync.Once

@@ -14,9 +14,9 @@ foreach ($file in $files) {
 
         # Determine go_package based on filename
         $goPackage = if ($file.Name -eq 'openmetrics_data_model.proto') {
-            'github.com/streamlit/streamlit/go-backend/proto/openmetrics'
+            'github.com/stevenblair/streamlit/go-backend/proto/openmetrics'
         } else {
-            'github.com/streamlit/streamlit/go-backend/proto'
+            'github.com/stevenblair/streamlit/go-backend/proto'
         }
 
         foreach ($line in $lines) {

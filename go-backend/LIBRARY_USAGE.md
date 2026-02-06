@@ -5,11 +5,11 @@
 Protobuf files (`.pb.go`) are now **committed** to the repository, making this library immediately usable:
 
 ```bash
-go get github.com/streamlit/streamlit/go-backend
+go get github.com/stevenblair/streamlit/go-backend
 ```
 
 ```go
-import st "github.com/streamlit/streamlit/go-backend"
+import st "github.com/stevenblair/streamlit/go-backend"
 
 func main() {
     st.Run(func() {

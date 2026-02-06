@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -177,7 +178,7 @@ const file_streamlit_proto_Delta_proto_rawDesc = "" +
 	"\x0earrow_add_rows\x18\a \x01(\v2\x12.ArrowNamedDataSetH\x00R\farrowAddRows\x12\x1f\n" +
 	"\vfragment_id\x18\b \x01(\tR\n" +
 	"fragmentIdB\x06\n" +
-	"\x04typeJ\x04\b\x05\x10\x06B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x04typeJ\x04\b\x05\x10\x06B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Delta_proto_rawDescOnce sync.Once

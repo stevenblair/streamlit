@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gorilla/websocket"
-	pb "github.com/streamlit/streamlit/go-backend/proto"
+	pb "github.com/stevenblair/streamlit/go-backend/proto"
 	"google.golang.org/protobuf/proto"
 )
 

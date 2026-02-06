@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/streamlit/streamlit/go-backend/internal/runtime"
+	"github.com/stevenblair/streamlit/go-backend/internal/runtime"
 )
 
 var upgrader = websocket.Upgrader{

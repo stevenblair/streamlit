@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -428,7 +429,7 @@ const file_streamlit_proto_WidgetStates_proto_rawDesc = "" +
 	"\x14string_trigger_value\x18\x0e \x01(\v2\x13.StringTriggerValueB\x02\x18\x01H\x00R\x12stringTriggerValue\x12;\n" +
 	"\x10chat_input_value\x18\x0f \x01(\v2\x0f.ChatInputValueH\x00R\x0echatInputValue\x12.\n" +
 	"\x12json_trigger_value\x18\x10 \x01(\tH\x00R\x10jsonTriggerValueB\a\n" +
-	"\x05valueB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x05valueB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_WidgetStates_proto_rawDescOnce sync.Once

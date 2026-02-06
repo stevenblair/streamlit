@@ -18,7 +18,7 @@ import (
 	"github.com/apache/arrow/go/v18/arrow/ipc"
 	"github.com/apache/arrow/go/v18/arrow/memory"
 	"github.com/gorilla/websocket"
-	pb "github.com/streamlit/streamlit/go-backend/proto"
+	pb "github.com/stevenblair/streamlit/go-backend/proto"
 	"google.golang.org/protobuf/proto"
 )
 

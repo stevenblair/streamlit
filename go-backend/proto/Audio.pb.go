@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -146,7 +147,7 @@ const file_streamlit_proto_Audio_proto_rawDesc = "" +
 	"\x02id\x18\t \x01(\tR\x02id\x12>\n" +
 	"\fwidth_config\x18\n" +
 	" \x01(\v2\x16.streamlit.WidthConfigH\x00R\vwidthConfig\x88\x01\x01B\x0f\n" +
-	"\r_width_configJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03J\x04\b\x04\x10\x05B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\r_width_configJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03J\x04\b\x04\x10\x05B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Audio_proto_rawDescOnce sync.Once

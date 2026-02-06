@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -88,7 +89,7 @@ const file_streamlit_proto_PageInfo_proto_rawDesc = "" +
 	"\n" +
 	"\x1estreamlit/proto/PageInfo.proto\"-\n" +
 	"\bPageInfo\x12!\n" +
-	"\fquery_string\x18\x01 \x01(\tR\vqueryStringB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\fquery_string\x18\x01 \x01(\tR\vqueryStringB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_PageInfo_proto_rawDescOnce sync.Once

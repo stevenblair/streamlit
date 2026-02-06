@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -175,7 +176,7 @@ const file_streamlit_proto_FileUploader_proto_rawDesc = "" +
 	"\bdisabled\x18\t \x01(\bR\bdisabled\x12;\n" +
 	"\x10label_visibility\x18\n" +
 	" \x01(\v2\x10.LabelVisibilityR\x0flabelVisibility\x12)\n" +
-	"\x10accept_directory\x18\v \x01(\bR\x0facceptDirectoryJ\x04\b\x05\x10\x06B1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"\x10accept_directory\x18\v \x01(\bR\x0facceptDirectoryJ\x04\b\x05\x10\x06B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_FileUploader_proto_rawDescOnce sync.Once

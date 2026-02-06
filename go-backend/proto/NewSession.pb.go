@@ -22,11 +22,12 @@
 package proto
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -1709,7 +1710,7 @@ const file_streamlit_proto_NewSession_proto_rawDesc = "" +
 	"\x0epython_version\x18\x02 \x01(\tR\rpythonVersion\x12\x1b\n" +
 	"\tserver_os\x18\x03 \x01(\tR\bserverOs\x12\x1f\n" +
 	"\vhas_display\x18\x04 \x01(\bR\n" +
-	"hasDisplayB1Z/github.com/streamlit/streamlit/go-backend/protob\x06proto3"
+	"hasDisplayB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_NewSession_proto_rawDescOnce sync.Once

@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -188,7 +187,7 @@ const file_streamlit_proto_DeckGlJsonChart_proto_rawDesc = "" +
 	" \x01(\tR\x06formId\"4\n" +
 	"\rSelectionMode\x12\x11\n" +
 	"\rSINGLE_OBJECT\x10\x00\x12\x10\n" +
-	"\fMULTI_OBJECT\x10\x01J\x04\b\x04\x10\x05J\x04\b\a\x10\bJ\x04\b\b\x10\tB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\fMULTI_OBJECT\x10\x01J\x04\b\x04\x10\x05J\x04\b\a\x10\bJ\x04\b\b\x10\tB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_DeckGlJsonChart_proto_rawDescOnce sync.Once

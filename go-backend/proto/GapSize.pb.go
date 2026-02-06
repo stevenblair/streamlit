@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -191,7 +190,7 @@ const file_streamlit_proto_GapSize_proto_rawDesc = "" +
 	"\x06XSMALL\x10\x06\x12\n" +
 	"\n" +
 	"\x06XLARGE\x10\a\x12\v\n" +
-	"\aXXLARGE\x10\bB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\aXXLARGE\x10\bB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_GapSize_proto_rawDescOnce sync.Once

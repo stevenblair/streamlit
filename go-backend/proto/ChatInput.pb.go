@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -253,7 +252,7 @@ const file_streamlit_proto_ChatInput_proto_rawDesc = "" +
 	"\x06SINGLE\x10\x01\x12\f\n" +
 	"\bMULTIPLE\x10\x02\x12\r\n" +
 	"\tDIRECTORY\x10\x03B\x14\n" +
-	"\x12_audio_sample_rateJ\x04\b\b\x10\tB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x12_audio_sample_rateJ\x04\b\b\x10\tB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ChatInput_proto_rawDescOnce sync.Once

@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -109,7 +108,7 @@ const file_streamlit_proto_GraphVizChart_proto_rawDesc = "" +
 	"\x04spec\x18\x01 \x01(\tR\x04spec\x12\x1d\n" +
 	"\n" +
 	"element_id\x18\x05 \x01(\tR\telementId\x12\x16\n" +
-	"\x06engine\x18\x06 \x01(\tR\x06engineJ\x04\b\x02\x10\x03J\x04\b\x03\x10\x04J\x04\b\x04\x10\x05B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x06engine\x18\x06 \x01(\tR\x06engineJ\x04\b\x02\x10\x03J\x04\b\x03\x10\x04J\x04\b\x04\x10\x05B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_GraphVizChart_proto_rawDescOnce sync.Once

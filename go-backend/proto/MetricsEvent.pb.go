@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -572,7 +571,7 @@ const file_streamlit_proto_MetricsEvent_proto_rawDesc = "" +
 	"\x0fbrowser_version\x18\x02 \x01(\tR\x0ebrowserVersion\x12\x1f\n" +
 	"\vdevice_type\x18\x03 \x01(\tR\n" +
 	"deviceType\x12\x0e\n" +
-	"\x02os\x18\x04 \x01(\tR\x02osB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x02os\x18\x04 \x01(\tR\x02osB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_MetricsEvent_proto_rawDescOnce sync.Once

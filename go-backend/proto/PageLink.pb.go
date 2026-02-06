@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -170,7 +169,7 @@ const file_streamlit_proto_PageLink_proto_rawDesc = "" +
 	"\fquery_string\x18\t \x01(\tR\vqueryString\x12F\n" +
 	"\ricon_position\x18\n" +
 	" \x01(\x0e2!.streamlit.ButtonLikeIconPositionR\ficonPositionB\x16\n" +
-	"\x14_use_container_widthB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x14_use_container_widthB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_PageLink_proto_rawDescOnce sync.Once

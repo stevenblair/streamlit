@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -111,7 +110,7 @@ const file_streamlit_proto_ArrowNamedDataSet_proto_rawDesc = "" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x19\n" +
 	"\bhas_name\x18\x03 \x01(\bR\ahasName\x12\x1e\n" +
 	"\x04data\x18\x02 \x01(\v2\n" +
-	".ArrowDataR\x04dataB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	".ArrowDataR\x04dataB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ArrowNamedDataSet_proto_rawDescOnce sync.Once

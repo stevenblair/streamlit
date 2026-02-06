@@ -11,13 +11,12 @@
 package openmetrics
 
 import (
-	reflect "reflect"
-	sync "sync"
-	unsafe "unsafe"
-
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
+	reflect "reflect"
+	sync "sync"
+	unsafe "unsafe"
 )
 
 const (
@@ -1431,7 +1430,7 @@ const file_streamlit_proto_openmetrics_data_model_proto_rawDesc = "" +
 	"\x04INFO\x10\x04\x12\r\n" +
 	"\tHISTOGRAM\x10\x05\x12\x13\n" +
 	"\x0fGAUGE_HISTOGRAM\x10\x06\x12\v\n" +
-	"\aSUMMARY\x10\aB=Z;github.com/stevenblair/streamlit/go-backend/proto/openmetricsb\x06proto3"
+	"\aSUMMARY\x10\aB?Z=github.com/stevenblair/streamlit/go-backend/proto/openmetricsb\x06proto3"
 
 var (
 	file_streamlit_proto_openmetrics_data_model_proto_rawDescOnce sync.Once

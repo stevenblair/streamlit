@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -164,7 +163,7 @@ const file_streamlit_proto_HeightConfig_proto_rawDesc = "" +
 	"\fpixel_height\x18\x03 \x01(\rH\x00R\vpixelHeight\x12\x1f\n" +
 	"\n" +
 	"rem_height\x18\x04 \x01(\x02H\x00R\tremHeightB\r\n" +
-	"\vheight_specB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\vheight_specB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_HeightConfig_proto_rawDescOnce sync.Once

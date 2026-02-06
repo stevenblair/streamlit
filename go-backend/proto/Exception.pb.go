@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -147,7 +146,7 @@ const file_streamlit_proto_Exception_proto_rawDesc = "" +
 	"stackTrace\x12\x1d\n" +
 	"\n" +
 	"is_warning\x18\x05 \x01(\bR\tisWarning\x129\n" +
-	"\fwidth_config\x18\x06 \x01(\v2\x16.streamlit.WidthConfigR\vwidthConfigB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\fwidth_config\x18\x06 \x01(\v2\x16.streamlit.WidthConfigR\vwidthConfigB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Exception_proto_rawDescOnce sync.Once

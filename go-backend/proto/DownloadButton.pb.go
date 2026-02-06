@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -206,7 +205,7 @@ const file_streamlit_proto_DownloadButton_proto_rawDesc = "" +
 	"\x10deferred_file_id\x18\f \x01(\tH\x00R\x0edeferredFileId\x88\x01\x01\x12\x1a\n" +
 	"\bshortcut\x18\r \x01(\tR\bshortcut\x12F\n" +
 	"\ricon_position\x18\x0e \x01(\x0e2!.streamlit.ButtonLikeIconPositionR\ficonPositionB\x13\n" +
-	"\x11_deferred_file_idB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x11_deferred_file_idB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_DownloadButton_proto_rawDescOnce sync.Once

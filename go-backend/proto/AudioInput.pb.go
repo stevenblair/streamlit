@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -144,7 +143,7 @@ const file_streamlit_proto_AudioInput_proto_rawDesc = "" +
 	"\x10label_visibility\x18\x06 \x01(\v2\x10.LabelVisibilityR\x0flabelVisibility\x12$\n" +
 	"\vsample_rate\x18\a \x01(\x05H\x00R\n" +
 	"sampleRate\x88\x01\x01B\x0e\n" +
-	"\f_sample_rateB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\f_sample_rateB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_AudioInput_proto_rawDescOnce sync.Once

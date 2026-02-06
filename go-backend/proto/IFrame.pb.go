@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -149,7 +148,7 @@ const file_streamlit_proto_IFrame_proto_rawDesc = "" +
 	"\ttab_index\x18\b \x01(\x05H\x01R\btabIndex\x88\x01\x01B\x06\n" +
 	"\x04typeB\f\n" +
 	"\n" +
-	"_tab_indexJ\x04\b\x03\x10\x04J\x04\b\x04\x10\x05J\x04\b\x05\x10\x06B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"_tab_indexJ\x04\b\x03\x10\x04J\x04\b\x04\x10\x05J\x04\b\x05\x10\x06B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_IFrame_proto_rawDescOnce sync.Once

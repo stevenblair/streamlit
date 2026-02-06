@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -704,7 +703,7 @@ const file_streamlit_proto_ForwardMsg_proto_rawDesc = "" +
 	"delta_path\x18\x02 \x03(\rR\tdeltaPath\x12,\n" +
 	"\x12active_script_hash\x18\x04 \x01(\tR\x10activeScriptHashJ\x04\b\x03\x10\x04\"9\n" +
 	"\x0eForwardMsgList\x12'\n" +
-	"\bmessages\x18\x01 \x03(\v2\v.ForwardMsgR\bmessagesB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\bmessages\x18\x01 \x03(\v2\v.ForwardMsgR\bmessagesB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ForwardMsg_proto_rawDescOnce sync.Once

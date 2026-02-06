@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -192,7 +191,7 @@ const file_streamlit_proto_Selectbox_proto_rawDesc = "" +
 	"\b_defaultB\f\n" +
 	"\n" +
 	"_raw_valueB\x15\n" +
-	"\x13_accept_new_optionsJ\x04\b\a\x10\bB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x13_accept_new_optionsJ\x04\b\a\x10\bB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Selectbox_proto_rawDescOnce sync.Once

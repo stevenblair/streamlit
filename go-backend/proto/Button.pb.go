@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -182,7 +181,7 @@ const file_streamlit_proto_Button_proto_rawDesc = "" +
 	" \x01(\tR\x04icon\x12\x1a\n" +
 	"\bshortcut\x18\v \x01(\tR\bshortcut\x12F\n" +
 	"\ricon_position\x18\f \x01(\x0e2!.streamlit.ButtonLikeIconPositionR\ficonPositionJ\x04\b\t\x10\n" +
-	"B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Button_proto_rawDescOnce sync.Once

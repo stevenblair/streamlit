@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -196,7 +195,7 @@ const file_streamlit_proto_DateInput_proto_rawDesc = "" +
 	" \x01(\bR\bsetValue\x12\x1a\n" +
 	"\bdisabled\x18\v \x01(\bR\bdisabled\x12;\n" +
 	"\x10label_visibility\x18\f \x01(\v2\x10.LabelVisibilityR\x0flabelVisibility\x12\x16\n" +
-	"\x06format\x18\r \x01(\tR\x06formatB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x06format\x18\r \x01(\tR\x06formatB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_DateInput_proto_rawDescOnce sync.Once

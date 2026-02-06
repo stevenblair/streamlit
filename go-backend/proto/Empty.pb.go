@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -79,7 +78,7 @@ var File_streamlit_proto_Empty_proto protoreflect.FileDescriptor
 const file_streamlit_proto_Empty_proto_rawDesc = "" +
 	"\n" +
 	"\x1bstreamlit/proto/Empty.proto\"\a\n" +
-	"\x05EmptyB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x05EmptyB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Empty_proto_rawDescOnce sync.Once

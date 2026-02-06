@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -200,7 +199,7 @@ const file_streamlit_proto_MultiSelect_proto_rawDesc = "" +
 	"\x0emax_selections\x18\v \x01(\x05R\rmaxSelections\x12 \n" +
 	"\vplaceholder\x18\f \x01(\tR\vplaceholder\x121\n" +
 	"\x12accept_new_options\x18\r \x01(\bH\x00R\x10acceptNewOptions\x88\x01\x01B\x15\n" +
-	"\x13_accept_new_optionsJ\x04\b\a\x10\bB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x13_accept_new_optionsJ\x04\b\a\x10\bB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_MultiSelect_proto_rawDescOnce sync.Once

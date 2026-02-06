@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -159,7 +158,7 @@ const file_streamlit_proto_ColorPicker_proto_rawDesc = "" +
 	"\x05value\x18\x06 \x01(\tR\x05value\x12\x1b\n" +
 	"\tset_value\x18\a \x01(\bR\bsetValue\x12\x1a\n" +
 	"\bdisabled\x18\b \x01(\bR\bdisabled\x12;\n" +
-	"\x10label_visibility\x18\t \x01(\v2\x10.LabelVisibilityR\x0flabelVisibilityB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x10label_visibility\x18\t \x01(\v2\x10.LabelVisibilityR\x0flabelVisibilityB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ColorPicker_proto_rawDescOnce sync.Once

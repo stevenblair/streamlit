@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -219,7 +218,7 @@ const file_streamlit_proto_Checkbox_proto_rawDesc = "" +
 	"\tStyleType\x12\v\n" +
 	"\aDEFAULT\x10\x00\x12\n" +
 	"\n" +
-	"\x06TOGGLE\x10\x01B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x06TOGGLE\x10\x01B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Checkbox_proto_rawDescOnce sync.Once

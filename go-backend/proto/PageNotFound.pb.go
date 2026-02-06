@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -88,7 +87,7 @@ const file_streamlit_proto_PageNotFound_proto_rawDesc = "" +
 	"\n" +
 	"\"streamlit/proto/PageNotFound.proto\"+\n" +
 	"\fPageNotFound\x12\x1b\n" +
-	"\tpage_name\x18\x01 \x01(\tR\bpageNameB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\tpage_name\x18\x01 \x01(\tR\bpageNameB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_PageNotFound_proto_rawDescOnce sync.Once

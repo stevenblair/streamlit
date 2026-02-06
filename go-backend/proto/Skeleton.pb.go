@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -149,7 +148,7 @@ const file_streamlit_proto_Skeleton_proto_rawDesc = "" +
 	"\rSkeletonStyle\x12\v\n" +
 	"\aELEMENT\x10\x00\x12\a\n" +
 	"\x03APP\x10\x01B\t\n" +
-	"\a_heightB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\a_heightB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Skeleton_proto_rawDescOnce sync.Once

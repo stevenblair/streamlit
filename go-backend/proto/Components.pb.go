@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -462,7 +461,7 @@ const file_streamlit_proto_Components_proto_rawDesc = "" +
 	"\x04uuid\x18\x01 \x01(\tR\x04uuid\x12\x18\n" +
 	"\acaption\x18\x02 \x01(\tR\acaption\x12\x16\n" +
 	"\x06styles\x18\x03 \x01(\tR\x06styles\x12%\n" +
-	"\x0edisplay_values\x18\x04 \x01(\fR\rdisplayValuesB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x0edisplay_values\x18\x04 \x01(\fR\rdisplayValuesB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Components_proto_rawDescOnce sync.Once

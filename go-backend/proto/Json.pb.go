@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -110,7 +109,7 @@ const file_streamlit_proto_Json_proto_rawDesc = "" +
 	"\x04body\x18\x01 \x01(\tR\x04body\x12\x1a\n" +
 	"\bexpanded\x18\x02 \x01(\bR\bexpanded\x12-\n" +
 	"\x10max_expand_depth\x18\x03 \x01(\x05H\x00R\x0emaxExpandDepth\x88\x01\x01B\x13\n" +
-	"\x11_max_expand_depthB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x11_max_expand_depthB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Json_proto_rawDescOnce sync.Once

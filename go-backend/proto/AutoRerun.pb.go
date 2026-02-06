@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -99,7 +98,7 @@ const file_streamlit_proto_AutoRerun_proto_rawDesc = "" +
 	"\tAutoRerun\x12\x1a\n" +
 	"\binterval\x18\x01 \x01(\x02R\binterval\x12\x1f\n" +
 	"\vfragment_id\x18\x02 \x01(\tR\n" +
-	"fragmentIdB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"fragmentIdB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_AutoRerun_proto_rawDescOnce sync.Once

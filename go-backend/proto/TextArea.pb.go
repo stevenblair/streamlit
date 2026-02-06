@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -181,7 +180,7 @@ const file_streamlit_proto_TextArea_proto_rawDesc = "" +
 	"\x10label_visibility\x18\f \x01(\v2\x10.LabelVisibilityR\x0flabelVisibilityB\n" +
 	"\n" +
 	"\b_defaultB\b\n" +
-	"\x06_valueJ\x04\b\x04\x10\x05B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x06_valueJ\x04\b\x04\x10\x05B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_TextArea_proto_rawDescOnce sync.Once

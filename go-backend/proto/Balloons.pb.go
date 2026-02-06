@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -87,7 +86,7 @@ const file_streamlit_proto_Balloons_proto_rawDesc = "" +
 	"\n" +
 	"\x1estreamlit/proto/Balloons.proto\"*\n" +
 	"\bBalloons\x12\x12\n" +
-	"\x04show\x18\x03 \x01(\bR\x04showJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x04show\x18\x03 \x01(\bR\x04showJ\x04\b\x01\x10\x02J\x04\b\x02\x10\x03B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Balloons_proto_rawDescOnce sync.Once

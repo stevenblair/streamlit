@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -161,7 +160,7 @@ const file_streamlit_proto_ArrowVegaLiteChart_proto_rawDesc = "" +
 	"\x05theme\x18\x06 \x01(\tR\x05theme\x12\x0e\n" +
 	"\x02id\x18\a \x01(\tR\x02id\x12%\n" +
 	"\x0eselection_mode\x18\b \x03(\tR\rselectionMode\x12\x17\n" +
-	"\aform_id\x18\t \x01(\tR\x06formIdJ\x04\b\x03\x10\x04B1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\aform_id\x18\t \x01(\tR\x06formIdJ\x04\b\x03\x10\x04B3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_ArrowVegaLiteChart_proto_rawDescOnce sync.Once

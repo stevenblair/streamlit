@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -132,7 +131,7 @@ const file_streamlit_proto_CameraInput_proto_rawDesc = "" +
 	"\x04help\x18\x03 \x01(\tR\x04help\x12\x17\n" +
 	"\aform_id\x18\x04 \x01(\tR\x06formId\x12\x1a\n" +
 	"\bdisabled\x18\x05 \x01(\bR\bdisabled\x12;\n" +
-	"\x10label_visibility\x18\x06 \x01(\v2\x10.LabelVisibilityR\x0flabelVisibilityB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x10label_visibility\x18\x06 \x01(\v2\x10.LabelVisibilityR\x0flabelVisibilityB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_CameraInput_proto_rawDescOnce sync.Once

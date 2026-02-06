@@ -22,12 +22,11 @@
 package proto
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -87,7 +86,7 @@ const file_streamlit_proto_Favicon_proto_rawDesc = "" +
 	"\n" +
 	"\x1dstreamlit/proto/Favicon.proto\"\x1b\n" +
 	"\aFavicon\x12\x10\n" +
-	"\x03url\x18\x01 \x01(\tR\x03urlB1Z/github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
+	"\x03url\x18\x01 \x01(\tR\x03urlB3Z1github.com/stevenblair/streamlit/go-backend/protob\x06proto3"
 
 var (
 	file_streamlit_proto_Favicon_proto_rawDescOnce sync.Once

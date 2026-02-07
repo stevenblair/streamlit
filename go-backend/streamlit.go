@@ -3,8 +3,10 @@ package streamlit
 import (
 	"bytes"
 	"context"
+	"embed"
 	"encoding/json"
 	"fmt"
+	"io/fs"
 	"log"
 	"net/http"
 	"os"
@@ -21,6 +23,9 @@ import (
 	pb "github.com/stevenblair/streamlit/go-backend/proto"
 	"google.golang.org/protobuf/proto"
 )
+
+//go:embed all:static
+var staticFiles embed.FS
 
 var (
 	elements        []Element
@@ -585,6 +590,28 @@ func convertElementToProto(elemMap map[string]interface{}) *pb.Element {
 			}
 		}
 
+		// Skip if no data
+		if len(dataPoints) == 0 {
+			return nil
+		}
+
+		// Calculate data extent for explicit domain
+		minVal, maxVal := dataPoints[0], dataPoints[0]
+		for _, v := range dataPoints {
+			if v < minVal {
+				minVal = v
+			}
+			if v > maxVal {
+				maxVal = v
+			}
+		}
+
+		// Add a small padding to the domain (5%)
+		padding := (maxVal - minVal) * 0.05
+		if padding == 0 {
+			padding = 1 // Default padding if all values are the same
+		}
+
 		// Create Arrow schema (index: int64, value: float64)
 		pool := memory.NewGoAllocator()
 		schema := arrow.NewSchema(
@@ -624,14 +651,22 @@ func convertElementToProto(elemMap map[string]interface{}) *pb.Element {
 			return nil
 		}
 
-		// Create a simple Vega-Lite spec for a line chart
-		vegaSpec := `{
+		// Create a Vega-Lite spec with explicit domains to prevent infinity warnings
+		vegaSpec := fmt.Sprintf(`{
 			"mark": "line",
 			"encoding": {
-				"x": {"field": "index", "type": "quantitative"},
-				"y": {"field": "value", "type": "quantitative"}
+				"x": {
+					"field": "index",
+					"type": "quantitative",
+					"scale": {"domain": [0, %d]}
+				},
+				"y": {
+					"field": "value",
+					"type": "quantitative",
+					"scale": {"domain": [%f, %f]}
+				}
 			}
-		}`
+		}`, len(dataPoints)-1, minVal-padding, maxVal+padding)
 
 		// Generate unique ID based on data to force chart updates when data changes
 		// Use first, last, and middle values plus length for a lightweight hash
@@ -876,28 +911,18 @@ func sendProtoMsg(conn *websocket.Conn, msg *pb.ForwardMsg) {
 	}
 }
 
-// findFrontendBuild looks for the frontend build directory in multiple locations
+// findFrontendBuild looks for the frontend build directory (fallback for development)
 func findFrontendBuild() string {
-	// Get the executable's directory
 	exePath, err := os.Executable()
 	if err != nil {
 		return ""
 	}
 	exeDir := filepath.Dir(exePath)
 
-	// Possible frontend locations relative to the executable
 	candidates := []string{
-		// UPSTREAM-COMPATIBLE: Use go-backend/static (not lib/streamlit/static)
-		// From go-backend/examples/X/ -> go-backend/static/
 		filepath.Join(exeDir, "..", "..", "static"),
-		// From go-backend/bin/ -> go-backend/static/
 		filepath.Join(exeDir, "..", "static"),
-		// From go-backend/ -> go-backend/static/
 		filepath.Join(exeDir, "static"),
-		// Fallback to original Streamlit location (for backwards compatibility)
-		filepath.Join(exeDir, "..", "..", "..", "lib", "streamlit", "static"),
-		filepath.Join(exeDir, "..", "..", "lib", "streamlit", "static"),
-		filepath.Join(exeDir, "lib", "streamlit", "static"),
 	}
 
 	for _, dir := range candidates {
@@ -905,7 +930,6 @@ func findFrontendBuild() string {
 		if err != nil {
 			continue
 		}
-		// Check if index.html exists
 		indexPath := filepath.Join(absDir, "index.html")
 		if _, err := os.Stat(indexPath); err == nil {
 			return absDir
@@ -957,54 +981,86 @@ func Run(app func()) error {
 		json.NewEncoder(w).Encode(config)
 	})
 
-	// Try to serve the built frontend, fall back to simple HTML if not available
-	staticDir := findFrontendBuild()
-	if staticDir != "" {
-		log.Printf("Serving frontend from: %s", staticDir)
-
-		// Create a file server for the static directory
-		fs := http.FileServer(http.Dir(staticDir))
-
-		// Serve the root path - serve index.html or files from the static directory
-		mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			// Serve the request with the file server
-			fs.ServeHTTP(w, r)
-		})
-	} else {
-		log.Println("Frontend not found, serving simple HTML page")
-		log.Println("To use the full UI, build the frontend with: cd ../frontend && make frontend-fast")
-
-		// Serve a simple HTML page (placeholder until frontend is built)
-		mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			html := `<!DOCTYPE html>
-<html>
-<head>
-    <title>Streamlit Go App</title>
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
-        .status { padding: 20px; background: #f0f2f6; border-radius: 8px; margin: 20px 0; }
-        code { background: #e8eaed; padding: 2px 6px; border-radius: 3px; }
-    </style>
-</head>
-<body>
-    <h1>🎈 Streamlit Go App</h1>
-    <div class="status">
-        <h3>✅ Server is running</h3>
-        <p>WebSocket: <code>ws://localhost:8501/_stcore/stream</code></p>
-        <p><strong>Note:</strong> Frontend UI not available. Build it with:</p>
-        <code>cd ../frontend && make frontend-fast</code>
-    </div>
-    <script>
-        const ws = new WebSocket("ws://localhost:8501/_stcore/stream");
-        ws.onopen = () => console.log("Connected");
-        ws.onmessage = (e) => console.log("Element:", e.data);
-    </script>
-</body>
-</html>`
-			w.Header().Set("Content-Type", "text/html")
-			fmt.Fprint(w, html)
-		})
+	// Serve embedded static files
+	// The embedded FS has structure: static/index.html, static/static/js/, static/static/css/
+	// We need to serve from the static/ subdirectory so paths match the HTML references
+	staticFS, err := fs.Sub(staticFiles, "static")
+	if err != nil {
+		log.Fatalf("Failed to access embedded static files: %v", err)
 	}
+
+	log.Println("Serving embedded frontend")
+
+	// Custom handler that serves files with proper MIME types
+	wrappedFileServer := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Read the file path (remove leading slash for FS lookup)
+		path := r.URL.Path
+		if path == "/" {
+			path = "/index.html"
+		}
+		path = path[1:] // Remove leading slash
+
+		// Convert Windows backslashes to forward slashes for embedded FS
+		path = filepath.ToSlash(path)
+
+		log.Printf("Looking for file: %s", path)
+
+		// Read file from embedded FS
+		data, err := fs.ReadFile(staticFS, path)
+		if err != nil {
+			log.Printf("File not found: %s (error: %v)", path, err)
+
+			// List directory to debug
+			dirPath := filepath.Dir(path)
+			log.Printf("Listing directory: %s", dirPath)
+			entries, _ := fs.ReadDir(staticFS, dirPath)
+			for _, entry := range entries {
+				log.Printf("  - %s", entry.Name())
+			}
+
+			http.NotFound(w, r)
+			return
+		}
+
+		// Set Content-Type based on file extension
+		ext := filepath.Ext(path)
+		contentType := "application/octet-stream"
+		switch ext {
+		case ".js":
+			contentType = "application/javascript; charset=utf-8"
+		case ".css":
+			contentType = "text/css; charset=utf-8"
+		case ".html":
+			contentType = "text/html; charset=utf-8"
+		case ".png":
+			contentType = "image/png"
+		case ".jpg", ".jpeg":
+			contentType = "image/jpeg"
+		case ".svg":
+			contentType = "image/svg+xml"
+		case ".woff":
+			contentType = "font/woff"
+		case ".woff2":
+			contentType = "font/woff2"
+		case ".ttf":
+			contentType = "font/ttf"
+		case ".json":
+			contentType = "application/json"
+		}
+
+		log.Printf("Serving: %s (Content-Type: %s, %d bytes)", r.URL.Path, contentType, len(data))
+
+		// Set all headers before writing response
+		w.Header().Set("Content-Type", contentType)
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+		w.Header().Set("Cache-Control", "public, max-age=31536000")
+
+		w.Write(data)
+	})
+
+	// Serve all files at root - this handles /static/*, /favicon.png, and /index.html
+	mux.Handle("/", wrappedFileServer)
 
 	server := &http.Server{
 		Addr:    fmt.Sprintf(":%d", port),

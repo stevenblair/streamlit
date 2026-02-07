@@ -63,11 +63,17 @@ func app() {
 
 	// Visualization
 	st.Subheader("Visualization")
-	st.Write(fmt.Sprintf("📈 **%s Waveform** - %d samples | Frequency: %.0f Hz | Amplitude: %.0f",
-		waveType, len(points), frequency, amplitude))
 
-	// Display waveform chart
-	st.LineChart(points)
+	// Only render chart if we have valid data
+	if len(points) > 0 {
+		st.Write(fmt.Sprintf("📈 **%s Waveform** - %d samples | Frequency: %.0f Hz | Amplitude: %.0f",
+			waveType, len(points), frequency, amplitude))
+
+		// Display waveform chart
+		st.LineChart(points)
+	} else {
+		st.Warning("No data to display. Adjust the parameters to generate a waveform.")
+	}
 
 	st.Divider()
 

@@ -15,7 +15,7 @@ This example showcases:
 
 ### ✅ Status Messages
 - `st.Success()` - Green success alerts
-- `st.Info()` - Blue informational alerts  
+- `st.Info()` - Blue informational alerts
 - `st.Warning()` - Yellow warning alerts
 - `st.Error()` - Red error alerts
 

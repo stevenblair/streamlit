@@ -45,7 +45,7 @@ cd go-backend
 ```go
 package main
 
-import st "github.com/stevenblair/streamlit/go-backend/pkg/streamlit"
+import st "github.com/stevenblair/streamlit/go-backend"
 
 func main() {
     st.Run(app)

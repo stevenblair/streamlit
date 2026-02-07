@@ -939,10 +939,14 @@ func findFrontendBuild() string {
 	return ""
 }
 
-// Run executes the Streamlit app with embedded server
+// Run executes the Streamlit app with embedded server on the default port (8501)
 func Run(app func()) error {
+	return RunWithPort(app, 8501)
+}
+
+// RunWithPort executes the Streamlit app with embedded server on the specified port
+func RunWithPort(app func(), port int) error {
 	appFunc = app
-	port := 8501
 
 	// Set up HTTP server
 	mux := http.NewServeMux()

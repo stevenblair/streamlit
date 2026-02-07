@@ -15,7 +15,7 @@ func main() {
 
 func app() {
 	st.Title("Test app title")
-	st.Write("Generate and visualize waveforms with real-time Go calculations")
+	st.Write("Some more text")
 }
 ```
 

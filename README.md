@@ -19,7 +19,7 @@ func app() {
 }
 ```
 
-Then visit http://localhost:8501 to view the app. See the [examples](examples/) directory for some simple examples.
+Then visit http://localhost:8501 to view the app. See the [examples](go-backend/examples/) directory for some simple examples.
 
 <br>
 
